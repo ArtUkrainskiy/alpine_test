@@ -89,6 +89,6 @@ if test "$PHP_ALPINE_TEST" != "no"; then
 
   dnl In case of no dependencies
   AC_DEFINE(HAVE_ALPINE_TEST, 1, [ Have alpine_test support ])
-
-  PHP_NEW_EXTENSION(alpine_test, alpine_test.c, $ext_shared)
+  PHP_REQUIRE_CXX()
+  PHP_NEW_EXTENSION(alpine_test, alpine_test.cpp, $ext_shared)
 fi
