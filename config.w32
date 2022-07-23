@@ -1,0 +1,7 @@
+ARG_ENABLE('alpine_test', 'alpine_test support', 'no');
+
+if (PHP_ALPINE_TEST != 'no') {
+	AC_DEFINE('HAVE_ALPINE_TEST', 1, 'alpine_test support enabled');
+
+	EXTENSION('alpine_test', 'alpine_test.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
